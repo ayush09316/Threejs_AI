@@ -25,6 +25,7 @@ const Customizer = () => {
   })
 
   // show tab content depending on the activeTab
+
   const generateTabContent = () => {
     switch (activeEditorTab) {
       case "colorpicker":
@@ -91,6 +92,9 @@ const Customizer = () => {
         break;
       case "stylishShirt":
           state.isFullTexture = !activeFilterTab[tabName];
+        break;
+      case "download":
+        downloadCanvasToImage();
         break;
       default:
         state.isLogoTexture = true;
